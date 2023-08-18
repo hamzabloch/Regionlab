@@ -500,62 +500,90 @@ Add Comment</a>
 		<tbody>
 		 @if(auth()->user()->role == 'user')
 
+     @if($clients->clientbelongs->name !==null)
         	<tr>
         		<th class="font-weight-bold">Name</th>
                 <td class="text-dark">{{$clients->clientbelongs->name}}</td> 
             </tr>
+            @endif
+             @if($clients->clientbelongs->email !==null)
         	<tr>
         		<th class="font-weight-bold">Email</th>
                 <td class="text-dark">{{$clients->clientbelongs->email}}</td> 
             </tr>
+            @endif
+             @if($clients->clientbelongs->status !==null)
         	<tr>
         		<th class="font-weight-bold">Status</th>
                 <td class="text-dark">{{$clients->clientbelongs->status}}</td>
             </tr>
+            @endif
+             @if($clients->clientbelongs->leadid !==null)
         	<tr>
         		<th class="font-weight-bold">Lead ID</th>
                 <td class="text-dark">{{$clients->clientbelongs->leadid}}</td>
             </tr>
+            @endif
+             @if($clients->clientbelongs->phone !==null)
         	<tr>
         		<th class="font-weight-bold">Phone</th>
                 <td class="text-dark">{{$clients->clientbelongs->phone}}</td>
             </tr>
+            @endif
+             @if($clients->clientbelongs->adress !==null)
         	<tr>
         		<th class="font-weight-bold">Adress</th>
                 <td class="text-dark">{{$clients->clientbelongs->adress}}</td>
             </tr>
+            @endif
+             @if($clients->clientbelongs->company !==null)
         	<tr>
         		<th class="font-weight-bold">Company</th>
                 <td class="text-dark">{{$clients->clientbelongs->company}}</td>
             </tr>
+            @endif
+             @if($clients->clientbelongs->position !==null)
         	<tr> 
         		<th class="font-weight-bold">Position</th>
-                  <td class="text-dark">{{$clients->clientbelongs->postion}}</td>
+                  <td class="text-dark">{{$clients->clientbelongs->position}}</td>
               </tr>
+              @endif
+               @if($clients->clientbelongs->country !==null)
         	<tr>
         		<th class="font-weight-bold">Country</th>
                 <td class="text-dark">{{$clients->clientbelongs->country}}</td>
             </tr>
+            @endif
+             @if($clients->clientbelongs->person_responsible !==null)
         	<tr>
                 <th class="font-weight-bold">Person Responsible</th>
                 <td class="text-dark">{{$clients->clientbelongs->person_responsible}}</td>
             </tr>
+            @endif
+             @if($clients->clientbelongs->time_call !==null)
         	<tr>
         		<th class="font-weight-bold">Time of Call</th>
                 	<td class="text-dark">{{$clients->clientbelongs->time_call}}</td>
                 </tr>
         	<tr>
+            @endif
+             @if($clients->clientbelongs->otheremail !==null)
         		<th class="font-weight-bold">Other Email</th>
                 <td class="text-dark">{{$clients->clientbelongs->otheremail}}</td>
             </tr>
+            @endif
+             @if($clients->clientbelongs->otherphone !==null)
         	<tr>
                <th class="font-weight-bold">Other Phone</th>
                 <td class="text-dark">{{$clients->clientbelongs->otherphone}}</td>
             </tr>
+            @endif
+             @if($clients->clientbelongs->nationality !==null)
               <tr>
                <th class="font-weight-bold">Nationality</th>
                 <td class="text-dark">{{$clients->clientbelongs->nationality}}</td>
             </tr>
+            @endif
 
 
      	
@@ -580,65 +608,102 @@ if (!empty($clients->clientbelongs->extra_detail)) {
 
         		 @if(auth()->user()->role == 'admin')
         		    		 	
+             @if($clients->name !==null)
 
         	<tr>
-
         		<th class="font-weight-bold">Name</th>
                 <td class="text-dark">{{$clients->name}}</td> 
             </tr>
+            @endif
+             @if($clients->email !==null)
+
         	<tr>
         		<th class="font-weight-bold">Email</th>
                 <td class="text-dark">{{$clients->email}}</td> 
             </tr>
+            @endif
+             @if($clients->status !==null)
+
         	<tr>
         		<th class="font-weight-bold">Status</th>
                 <td class="text-dark">{{$clients->status}}</td>
             </tr>
+            @endif
+             @if($clients->leadid !==null)
+
         	<tr>
         		<th class="font-weight-bold">Lead ID</th>
                 <td class="text-dark">{{$clients->leadid}}</td>
             </tr>
+            @endif
+             @if($clients->phone !==null)
+
         	<tr>
         		<th class="font-weight-bold">Phone</th>
                 <td class="text-dark">{{$clients->phone}}</td>
             </tr>
+            @endif
+             @if($clients->adress !==null)
+
         	<tr>
         		<th class="font-weight-bold">Adress</th>
                 <td class="text-dark">{{$clients->adress}}</td>
             </tr>
+            @endif
+             @if($clients->company !==null)
+
         	<tr>
         		<th class="font-weight-bold">Company</th>
                 <td class="text-dark">{{$clients->company}}</td>
             </tr>
+            @endif
+             @if($clients->position !==null)
+
         	<tr> 
         		<th class="font-weight-bold">Position</th>
                   <td class="text-dark">{{$clients->position}}</td>
               </tr>
+              @endif
+             @if($clients->country !==null)
+
         	<tr>
         		<th class="font-weight-bold">Country</th>
                 <td class="text-dark">{{$clients->country}}</td>
             </tr>
+            @endif
+             @if($clients->person_responsible !==null)
+
         	<tr>
                 <th class="font-weight-bold">Person Responsible</th>
                 <td class="text-dark">{{$clients->person_responsible}}</td>
             </tr>
+            @endif
+             @if($clients->time_call !==null)
+
         	<tr>
         		<th class="font-weight-bold">Time of Call</th>
                 	<td class="text-dark">{{$clients->time_call}}</td>
                 </tr>
+                @endif
+             @if($clients->otheremail !==null)
+
         	<tr>
         		<th class="font-weight-bold">Other Email</th>
                 <td class="text-dark">{{$clients->otheremail}}</td>
             </tr>
+            @endif
+             @if($clients->otherphone !==null)
         	<tr>
                <th class="font-weight-bold">Other Phone</th>
                 <td class="text-dark">{{$clients->otherphone}}</td>
             </tr>
+            @endif
+             @if($clients->nationality !==null)
               <tr>
                <th class="font-weight-bold">Nationality</th>
                 <td class="text-dark">{{$clients->nationality}}</td>
             </tr>
-
+            @endif  
 
      	
 @php
